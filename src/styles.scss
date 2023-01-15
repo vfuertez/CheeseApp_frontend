@@ -1,0 +1,28 @@
+$yellow: yellow;
+$black: black;
+
+@mixin color-bg {
+    color: $black;
+    background-color: $yellow;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    @include color-bg;
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+      margin: 20px;
+      font-size: 20px;  
+    }
+
+    a :hover {
+color: orange;
+    }
+}
