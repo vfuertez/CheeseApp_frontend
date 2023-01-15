@@ -15,6 +15,12 @@ function Show(props) {
       <h1>{cheese.name}</h1>
       <h2>{cheese.type}</h2>
       <img src={cheese.image} alt={cheese.name} />
+
+
+      <Form action={`/delete/${cheese._id}`} method="post">
+      <input type="submit" value='Delete' />
+      </Form>
+
     </div>
   )
 }

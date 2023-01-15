@@ -43,3 +43,12 @@ export const updateAction = async ({ request, params }) => {
 
   return redirect('/')
 }
+
+export const deleteAction = async ({params}) => {
+
+    await fetch(URL + "/cheese/" + params.id, {
+        method: "delete"
+    })
+  
+    return redirect("/")
+}
